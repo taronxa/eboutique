@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>toto</display-name>
+  <resource-ref>
+    <description>MySQL Datasource example</description>
+    <res-ref-name>jdbc/eBoutiqueDB</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <servlet-name>CreateProduct</servlet-name>
+    <jsp-file>/WEB-INF/views/createProduct.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateProduct</servlet-name>
+    <url-pattern>/createProduct</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CreateProductServlet</servlet-name>
+    <servlet-class>fr.formation.controleur.CreateProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateProductServlet</servlet-name>
+    <url-pattern>/CreateProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AfficheCatalogServlet</servlet-name>
+    <servlet-class>fr.formation.controleur.AfficheCatalogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AfficheCatalogServlet</servlet-name>
+    <url-pattern>/AfficheCatalogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CreateAuthenticateServlet</servlet-name>
+    <servlet-class>fr.formation.controleur.CreateAuthenticateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateAuthenticateServlet</servlet-name>
+    <url-pattern></url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ShowDetails</servlet-name>
+    <servlet-class>fr.formation.controleur.ShowDetailsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowDetails</servlet-name>
+    <url-pattern>/ShowDetailsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AfficheShoppingCartServlet</servlet-name>
+    <servlet-class>fr.formation.controleur.AfficheShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AfficheShoppingCartServlet</servlet-name>
+    <url-pattern>/AfficheShoppingCartServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ValidationShoppingCartServlet</servlet-name>
+    <servlet-class>fr.formation.controleur.ValidationShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidationShoppingCartServlet</servlet-name>
+    <url-pattern>/ValidationShoppingCartServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
